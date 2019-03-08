@@ -7,6 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GamePage implements OnInit {
 
+  items = [
+    {
+      name: "cool"
+    },
+    {
+      name: "cooler"
+    },
+    {
+      name: "coolest"
+    }
+  ]
+
   constructor() { }
 
   ngOnInit() {

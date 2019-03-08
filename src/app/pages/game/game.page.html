@@ -1,9 +1,24 @@
 <ion-header>
-  <ion-toolbar color="dark" text-center>
-    <ion-title>Game</ion-title>
+  <ion-toolbar text-right color="light">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title slot="start">Game</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="game" padding>
-  whatevers
+  <ion-grid>
+    <ion-row>
+      <ion-col class="flip-container" size="4" *ngFor="let item of items; index as i;">
+        <div class="flipper">
+          <ion-card color="dark" class="card back">
+            <ion-img [src]="'https://robohash.org/'+i"></ion-img>
+          </ion-card>
+          <ion-card class="card card-back front">
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
