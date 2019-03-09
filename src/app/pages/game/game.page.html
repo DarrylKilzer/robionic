@@ -9,15 +9,16 @@
 
 <ion-content class="game" padding>
   <ion-grid>
-    <ion-row>
-      <ion-col class="flip-container" size="4" *ngFor="let item of items; index as i;">
-        <div class="flipper">
-          <ion-card color="dark" class="card back">
-            <ion-img [src]="'https://robohash.org/'+i"></ion-img>
-          </ion-card>
-          <ion-card class="card card-back front">
-          </ion-card>
-        </div>
+    <ion-row class="full" align-items-center>
+      <ion-col size=12>
+        <ion-text>
+          <p>Score: {{score}}</p>
+        </ion-text>
+      </ion-col>
+      <ion-col size="4" *ngFor="let item of items; index as i;">
+        <ion-card color="dark" class="card back" [ngClass]="{'front' : item.flipped}" (click)="selector(item)">
+          <ion-img [src]="'https://robohash.org/'+ item.match" *ngIf="item.flipped"></ion-img>
+        </ion-card>
       </ion-col>
     </ion-row>
   </ion-grid>

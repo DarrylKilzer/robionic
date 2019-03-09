@@ -4,57 +4,18 @@
 --ion-background-color: linear-gradient(to top, #969ea1, #f3f7f5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.card-back {
-  background: #a80077;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top left, #353635, #a3a0a2);
-  /* Chrome 10-25, Safari 5.1-6 */
+.back {
   background: linear-gradient(to top left, #353635, #a3a0a2);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.front{
+  background: black;
 }
 
 .card{
     height: 5rem;
 }
-/* entire container, keeps perspective */
-.flip-container {
-	perspective: 1000px;
-}
-	/* flip the pane when hovered */
-	.flip-container:hover .flipper, .flip-container.hover .flipper {
-		transform: rotateY(180deg);
-	}
 
-.flip-container, .front, .back {
-    height: 5rem;
-    width: 5rem;
-}
-
-/* flip speed goes here */
-.flipper {
-	transition: 0.6s;
-	transform-style: preserve-3d;
-
-	position: relative;
-}
-
-/* hide back of pane during swap */
-.front, .back {
-	backface-visibility: hidden;
-
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-
-/* front pane, placed above back */
-.front {
-	z-index: 2;
-	/* for firefox 31 */
-	transform: rotateY(0deg);
-}
-
-/* back, initially hidden pane */
-.back {
-	transform: rotateY(180deg);
+.full{
+  height: 85vh;
 }
